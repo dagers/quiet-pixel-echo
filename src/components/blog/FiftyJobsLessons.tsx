@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -31,7 +30,7 @@ export const FiftyJobsLessons = ({ onBack }: BlogPostProps) => {
           </CardHeader>
           <CardContent className="prose prose-lg max-w-none">
             <p>
-              Throughout my career, I've had over 50 different jobs - from teaching in Vietnam to various roles across different industries. But at the core of my being, I never truly believed in jobs as my ultimate destination. I've always had dreams of my own, visions that extend far beyond the confines of traditional employment.
+              Throughout my career, I've had over 50 different jobs - from various customer-facing roles to teaching in Vietnam, where I got a bug for education as my grandparents were teachers. But at the core of my being, I never truly believed in jobs as my ultimate destination. I've always had dreams of my own, visions that extend far beyond the confines of traditional employment.
             </p>
             
             <p>
@@ -94,6 +93,10 @@ export const FiftyJobsLessons = ({ onBack }: BlogPostProps) => {
 
             <p>
               I was the right guy, with the wrong product. The lesson is learnt that I have to learn about business processes before anything that leads to deep market research. This realization has fundamentally shaped my approach to entrepreneurship - understanding that having the right entrepreneurial mindset and capabilities is only part of the equation. The other crucial part is ensuring thorough preparation through proper business process understanding and comprehensive market research before launching any venture.
+            </p>
+
+            <p>
+              My next venture is in Education. Keep posted as I continue to build on the passion for teaching that I discovered in Vietnam, inspired by my grandparents who were teachers, and apply the hard-learned lessons about proper business processes and market research to create meaningful educational impact.
             </p>
           </CardContent>
         </Card>
