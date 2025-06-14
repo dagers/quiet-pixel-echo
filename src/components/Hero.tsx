@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
@@ -12,7 +11,7 @@ export const Hero = () => {
     <section className="min-h-screen flex items-center justify-center px-4 py-16 relative bg-gradient-to-br from-slate-50 via-white to-slate-100">
       <div className="max-w-4xl mx-auto text-center space-y-8">
         {/* Profile Image */}
-        <div className="mb-8">
+        <div className="mb-12 -mt-8">
           <img 
             src="/lovable-uploads/da8bbe6b-01dd-4ed6-8eb3-dba870c3a181.png"
             alt="Dags Hofrats - Personal Photo"
