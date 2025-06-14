@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
@@ -13,7 +14,7 @@ export const Hero = () => {
         {/* Profile Image */}
         <div className="mb-12 -mt-8">
           <img 
-            src="/lovable-uploads/e3d9dfac-8617-449b-bff5-61d2b5243eae.png"
+            src="/lovable-uploads/4ce14e38-ea07-4f84-9d0c-e00a70ddbd00.png"
             alt="Dags Hofrats - Personal Photo"
             className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full object-cover shadow-2xl border-4 border-white"
           />
