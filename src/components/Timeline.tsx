@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, Lightbulb, Heart, TrendingUp, Award, BookOpen, ExternalLink, Globe, Users, Target } from "lucide-react";
+import { Calendar, Lightbulb, Heart, TrendingUp, Award, BookOpen, ExternalLink, Globe, Users, Target, Briefcase } from "lucide-react";
 
 // Import blog components
 import { EarlyEntrepreneurialFlair } from "./blog/EarlyEntrepreneurialFlair";
@@ -10,6 +10,7 @@ import { PremierLeagueStartup } from "./blog/PremierLeagueStartup";
 import { TeachingInVietnam } from "./blog/TeachingInVietnam";
 import { FreeProductLaunch } from "./blog/FreeProductLaunch";
 import { PizzaConesRiceStraws } from "./blog/PizzaConesRiceStraws";
+import { ComingBackFromVietnam } from "./blog/ComingBackFromVietnam";
 import { FinancialLiteracyCommunityWealth } from "./blog/FinancialLiteracyCommunityWealth";
 
 export const Timeline = () => {
@@ -62,6 +63,15 @@ export const Timeline = () => {
       blogKey: "pizza-cones-rice-straws"
     },
     {
+      year: "2022",
+      title: "Coming back from Vietnam and getting into employment",
+      description: "Navigating the challenging UK job market after returning from Vietnam, facing recruitment struggles and mental health challenges before finding the right opportunity.",
+      value: "Perseverance",
+      icon: Briefcase,
+      color: "bg-gradient-to-br from-teal-500 to-teal-600",
+      blogKey: "coming-back-from-vietnam"
+    },
+    {
       year: "Present",
       title: "Financial Literacy and Building Community Wealth through Purpose Led Ventures",
       description: "Focusing on enhancing lives through financial literacy education and purpose-driven entrepreneurship, believing that personal growth and overcoming poverty are closely related through building community wealth.",
@@ -93,6 +103,8 @@ export const Timeline = () => {
         return <FreeProductLaunch onBack={handleBackToTimeline} />;
       case "pizza-cones-rice-straws":
         return <PizzaConesRiceStraws onBack={handleBackToTimeline} />;
+      case "coming-back-from-vietnam":
+        return <ComingBackFromVietnam onBack={handleBackToTimeline} />;
       case "financial-literacy-community-wealth":
         return <FinancialLiteracyCommunityWealth onBack={handleBackToTimeline} />;
       default:
