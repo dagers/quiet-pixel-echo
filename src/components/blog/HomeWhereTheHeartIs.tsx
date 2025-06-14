@@ -71,7 +71,7 @@ export const HomeWhereTheHeartIs = ({ onBack }: BlogPostProps) => {
             </p>
             
             <p>
-              For most people, identity is deeply rooted in place - they're from a European country, they're Texan, they're from the Americas. But for global citizens like myself, identity becomes something more fluid, more complex. I've lived in England, taught in Vietnam. Each place has left its mark, but none has claimed me entirely.
+              For most people, identity is deeply rooted in place - Europeans, they're Texan, they're from the Americas. But for global citizens like myself, identity becomes something more fluid, more complex. I've lived in England, taught in Vietnam. Each place has left its mark, but none has claimed me entirely.
             </p>
             
             <p>
