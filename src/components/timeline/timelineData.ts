@@ -1,3 +1,4 @@
+
 import { Calendar, Lightbulb, Heart, TrendingUp, Award, Users, Target, Briefcase, Brain, Home } from "lucide-react";
 import { TimelineEventData } from "./types";
 
@@ -22,8 +23,8 @@ export const timelineEvents: TimelineEventData[] = [
   },
   {
     year: "2019",
-    title: "Teaching Results-Driven Experiences in Vietnam",
-    description: "From 2019 to 2022, I crafted custom learning resources and encouraged high-school and university students in Vietnam to pursue their ambitions by creating interactive lessons that promoted financial literacy and resilience.",
+    title: "Teaching in Vietnam (2019-2022)",
+    description: "Crafted custom learning resources and encouraged high-school and university students in Vietnam to pursue their ambitions by creating interactive lessons that promoted financial literacy and resilience.",
     value: "Growth",
     icon: Users,
     color: "bg-gradient-to-br from-green-500 to-green-600",
