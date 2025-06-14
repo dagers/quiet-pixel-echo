@@ -24,7 +24,7 @@ export const Hero = () => {
         <div className="space-y-6">
           <div className="inline-block">
             <img 
-              src="/lovable-uploads/df9486f3-fb79-4c2c-ac2c-6ea01805f9c2.png"
+              src="/lovable-uploads/14126d7d-0604-484e-8815-64bf3fe0b615.png"
               alt="Dags Hofrats Logo"
               className="h-16 md:h-20"
             />
