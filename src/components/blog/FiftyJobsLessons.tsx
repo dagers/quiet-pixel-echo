@@ -91,6 +91,10 @@ export const FiftyJobsLessons = ({ onBack }: BlogPostProps) => {
             <p>
               The lesson is clear: when you know who you are at the deepest level, every experience - even those that seem like detours - becomes valuable preparation for fulfilling your true purpose. The Pizza Cone gave me strength not because it was the perfect product, but because it proved I was the right person to chase my dreams, regardless of what others thought about the specific vehicle I chose to pursue them.
             </p>
+
+            <p>
+              I was the right guy, with the wrong product. The lesson is learnt that I have to learn about business processes before anything that leads to deep market research. This realization has fundamentally shaped my approach to entrepreneurship - understanding that having the right entrepreneurial mindset and capabilities is only part of the equation. The other crucial part is ensuring thorough preparation through proper business process understanding and comprehensive market research before launching any venture.
+            </p>
           </CardContent>
         </Card>
       </div>
