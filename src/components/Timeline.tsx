@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -11,7 +10,7 @@ import { PremierLeagueStartup } from "./blog/PremierLeagueStartup";
 import { TeachingInVietnam } from "./blog/TeachingInVietnam";
 import { FreeProductLaunch } from "./blog/FreeProductLaunch";
 import { PizzaConesRiceStraws } from "./blog/PizzaConesRiceStraws";
-import { FinancialLiteracyMission } from "./blog/FinancialLiteracyMission";
+import { FinancialLiteracyCommunityWealth } from "./blog/FinancialLiteracyCommunityWealth";
 
 export const Timeline = () => {
   const [activeBlog, setActiveBlog] = useState<string | null>(null);
@@ -24,8 +23,6 @@ export const Timeline = () => {
       value: "Resilience",
       icon: Heart,
       color: "bg-gradient-to-br from-red-500 to-red-600",
-      blogTitle: "Early Entrepreneurial Flair",
-      blogSummary: "From selling CD mixtapes to creating gaming servers - discovering entrepreneurship as an outlet for creativity and independence.",
       blogKey: "early-entrepreneurial"
     },
     {
@@ -35,8 +32,6 @@ export const Timeline = () => {
       value: "Innovation",
       icon: Lightbulb,
       color: "bg-gradient-to-br from-orange-500 to-orange-600",
-      blogTitle: "A Crazy Google Search That Led to a Premier League Startup",
-      blogSummary: "How one Google search led to BBC features, Premier League partnerships, and six-figure funding rounds.",
       blogKey: "premier-league-startup"
     },
     {
@@ -46,8 +41,6 @@ export const Timeline = () => {
       value: "Growth",
       icon: Users,
       color: "bg-gradient-to-br from-green-500 to-green-600",
-      blogTitle: "Teaching Results-Driven Experiences to Students in Vietnam",
-      blogSummary: "Discovering passion for education and helping students build confidence through YouTube channels and financial literacy.",
       blogKey: "teaching-vietnam"
     },
     {
@@ -57,8 +50,6 @@ export const Timeline = () => {
       value: "Leadership",
       icon: Award,
       color: "bg-gradient-to-br from-blue-500 to-blue-600",
-      blogTitle: "How I Scored a Free Product Launch for Students in Vietnam",
-      blogSummary: "Negotiating partnerships and building reward systems that inspired student communities across Vietnam.",
       blogKey: "free-product-launch"
     },
     {
@@ -68,20 +59,16 @@ export const Timeline = () => {
       value: "Innovation",
       icon: TrendingUp,
       color: "bg-gradient-to-br from-purple-500 to-purple-600",
-      blogTitle: "Pizza cones, rice straws and Vegan Pulled pork",
-      blogSummary: "Building valuable partnerships with social media influencers and sourcing sustainable products from Vietnam to the UK.",
       blogKey: "pizza-cones-rice-straws"
     },
     {
       year: "Present",
-      title: "Financial Literacy & Entrepreneurship Mission",
-      description: "Focusing on enhancing lives through financial literacy education, believing that personal growth and overcoming poverty are closely related. Teaching others to 'fish for a lifetime'.",
+      title: "Financial Literacy and Building Community Wealth through Purpose Led Ventures",
+      description: "Focusing on enhancing lives through financial literacy education and purpose-driven entrepreneurship, believing that personal growth and overcoming poverty are closely related through building community wealth.",
       value: "Purpose",
       icon: Target,
       color: "bg-gradient-to-br from-indigo-500 to-indigo-600",
-      blogTitle: "Keep your eyes on the prize & The lack of money is the root of all evil",
-      blogSummary: "Exploring the connection between financial literacy, personal growth, and defeating poverty through education.",
-      blogKey: "financial-literacy-mission"
+      blogKey: "financial-literacy-community-wealth"
     }
   ];
 
@@ -106,8 +93,8 @@ export const Timeline = () => {
         return <FreeProductLaunch onBack={handleBackToTimeline} />;
       case "pizza-cones-rice-straws":
         return <PizzaConesRiceStraws onBack={handleBackToTimeline} />;
-      case "financial-literacy-mission":
-        return <FinancialLiteracyMission onBack={handleBackToTimeline} />;
+      case "financial-literacy-community-wealth":
+        return <FinancialLiteracyCommunityWealth onBack={handleBackToTimeline} />;
       default:
         return null;
     }
