@@ -1,10 +1,21 @@
 
+import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar, Lightbulb, Heart, TrendingUp, Award, BookOpen, ExternalLink, Globe, Users, Target } from "lucide-react";
 
+// Import blog components
+import { EarlyEntrepreneurialFlair } from "./blog/EarlyEntrepreneurialFlair";
+import { PremierLeagueStartup } from "./blog/PremierLeagueStartup";
+import { TeachingInVietnam } from "./blog/TeachingInVietnam";
+import { FreeProductLaunch } from "./blog/FreeProductLaunch";
+import { PizzaConesRiceStraws } from "./blog/PizzaConesRiceStraws";
+import { FinancialLiteracyMission } from "./blog/FinancialLiteracyMission";
+
 export const Timeline = () => {
+  const [activeBlog, setActiveBlog] = useState<string | null>(null);
+
   const timelineEvents = [
     {
       year: "Early Years",
@@ -14,7 +25,8 @@ export const Timeline = () => {
       icon: Heart,
       color: "bg-gradient-to-br from-red-500 to-red-600",
       blogTitle: "Early Entrepreneurial Flair",
-      blogSummary: "From selling CD mixtapes to creating gaming servers - discovering entrepreneurship as an outlet for creativity and independence."
+      blogSummary: "From selling CD mixtapes to creating gaming servers - discovering entrepreneurship as an outlet for creativity and independence.",
+      blogKey: "early-entrepreneurial"
     },
     {
       year: "2018-2019",
@@ -24,7 +36,8 @@ export const Timeline = () => {
       icon: Lightbulb,
       color: "bg-gradient-to-br from-orange-500 to-orange-600",
       blogTitle: "A Crazy Google Search That Led to a Premier League Startup",
-      blogSummary: "How one Google search led to BBC features, Premier League partnerships, and six-figure funding rounds."
+      blogSummary: "How one Google search led to BBC features, Premier League partnerships, and six-figure funding rounds.",
+      blogKey: "premier-league-startup"
     },
     {
       year: "2019-2022",
@@ -34,7 +47,8 @@ export const Timeline = () => {
       icon: Users,
       color: "bg-gradient-to-br from-green-500 to-green-600",
       blogTitle: "Teaching Results-Driven Experiences to Students in Vietnam",
-      blogSummary: "Discovering passion for education and helping students build confidence through YouTube channels and financial literacy."
+      blogSummary: "Discovering passion for education and helping students build confidence through YouTube channels and financial literacy.",
+      blogKey: "teaching-vietnam"
     },
     {
       year: "2020",
@@ -44,7 +58,8 @@ export const Timeline = () => {
       icon: Award,
       color: "bg-gradient-to-br from-blue-500 to-blue-600",
       blogTitle: "How I Scored a Free Product Launch for Students in Vietnam",
-      blogSummary: "Negotiating partnerships and building reward systems that inspired student communities across Vietnam."
+      blogSummary: "Negotiating partnerships and building reward systems that inspired student communities across Vietnam.",
+      blogKey: "free-product-launch"
     },
     {
       year: "2021",
@@ -54,7 +69,8 @@ export const Timeline = () => {
       icon: TrendingUp,
       color: "bg-gradient-to-br from-purple-500 to-purple-600",
       blogTitle: "Pizza cones, rice straws and Vegan Pulled pork",
-      blogSummary: "Building valuable partnerships with social media influencers and sourcing sustainable products from Vietnam to the UK."
+      blogSummary: "Building valuable partnerships with social media influencers and sourcing sustainable products from Vietnam to the UK.",
+      blogKey: "pizza-cones-rice-straws"
     },
     {
       year: "Present",
@@ -64,9 +80,38 @@ export const Timeline = () => {
       icon: Target,
       color: "bg-gradient-to-br from-indigo-500 to-indigo-600",
       blogTitle: "Keep your eyes on the prize & The lack of money is the root of all evil",
-      blogSummary: "Exploring the connection between financial literacy, personal growth, and defeating poverty through education."
+      blogSummary: "Exploring the connection between financial literacy, personal growth, and defeating poverty through education.",
+      blogKey: "financial-literacy-mission"
     }
   ];
+
+  const handleReadBlog = (blogKey: string) => {
+    setActiveBlog(blogKey);
+  };
+
+  const handleBackToTimeline = () => {
+    setActiveBlog(null);
+  };
+
+  // Render blog post if one is active
+  if (activeBlog) {
+    switch (activeBlog) {
+      case "early-entrepreneurial":
+        return <EarlyEntrepreneurialFlair onBack={handleBackToTimeline} />;
+      case "premier-league-startup":
+        return <PremierLeagueStartup onBack={handleBackToTimeline} />;
+      case "teaching-vietnam":
+        return <TeachingInVietnam onBack={handleBackToTimeline} />;
+      case "free-product-launch":
+        return <FreeProductLaunch onBack={handleBackToTimeline} />;
+      case "pizza-cones-rice-straws":
+        return <PizzaConesRiceStraws onBack={handleBackToTimeline} />;
+      case "financial-literacy-mission":
+        return <FinancialLiteracyMission onBack={handleBackToTimeline} />;
+      default:
+        return null;
+    }
+  }
 
   return (
     <section id="timeline" className="py-24 px-4 bg-gradient-to-br from-slate-50 to-white">
@@ -129,6 +174,7 @@ export const Timeline = () => {
                       <Button 
                         variant="outline" 
                         size="sm"
+                        onClick={() => handleReadBlog(event.blogKey)}
                         className="w-full mt-3 border-primary/20 text-primary hover:bg-primary/5 hover:border-primary/40 transition-all duration-300"
                       >
                         Read Full Story
