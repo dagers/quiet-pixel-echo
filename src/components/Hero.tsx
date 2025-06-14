@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
@@ -21,9 +22,12 @@ export const Hero = () => {
 
         {/* Content */}
         <div className="space-y-6">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary/10 to-primary/5 rounded-full text-primary font-medium border border-primary/20">
-            <span className="text-3xl font-bold mr-3">DH</span>
-            Dags Hofrats
+          <div className="inline-block">
+            <img 
+              src="/lovable-uploads/df9486f3-fb79-4c2c-ac2c-6ea01805f9c2.png"
+              alt="Dags Hofrats Logo"
+              className="h-16 md:h-20"
+            />
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight">
             Embracing Life's
