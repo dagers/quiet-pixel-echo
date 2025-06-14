@@ -11,6 +11,15 @@ export const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-16 relative bg-gradient-to-br from-slate-50 via-white to-slate-100">
       <div className="max-w-4xl mx-auto text-center space-y-8">
+        {/* Profile Image */}
+        <div className="mb-8">
+          <img 
+            src="/lovable-uploads/da8bbe6b-01dd-4ed6-8eb3-dba870c3a181.png"
+            alt="Dags Hofrats - Personal Photo"
+            className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full object-cover shadow-2xl border-4 border-white"
+          />
+        </div>
+
         {/* Content */}
         <div className="space-y-6">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary/10 to-primary/5 rounded-full text-primary font-medium border border-primary/20">
