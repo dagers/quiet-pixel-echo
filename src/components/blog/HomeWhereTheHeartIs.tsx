@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Globe, Heart, Compass, Users, TrendingUp } from "lucide-react";
@@ -72,7 +71,7 @@ export const HomeWhereTheHeartIs = ({ onBack }: BlogPostProps) => {
             </p>
             
             <p>
-              For most people, identity is deeply rooted in place - they're from Manchester, they're Texan, they're Parisian. But for global citizens like myself, identity becomes something more fluid, more complex. I've lived in England, taught in Vietnam, built businesses across continents, and worked in more cities than some people visit in a lifetime. Each place has left its mark, but none has claimed me entirely.
+              For most people, identity is deeply rooted in place - they're from a European country, they're Texan, they're from the Americas. But for global citizens like myself, identity becomes something more fluid, more complex. I've lived in England, taught in Vietnam, built businesses across continents, and worked in more cities than some people visit in a lifetime. Each place has left its mark, but none has claimed me entirely.
             </p>
             
             <p>
