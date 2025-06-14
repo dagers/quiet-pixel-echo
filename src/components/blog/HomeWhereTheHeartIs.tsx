@@ -79,7 +79,7 @@ export const HomeWhereTheHeartIs = ({ onBack }: BlogPostProps) => {
             </p>
             
             <p>
-              My identity isn't anchored to a postal code - it's anchored to principles. I'm someone who believes in education because I taught students in Vietnam. I'm someone who understands resilience because I've started over in new countries more times than I can count. I'm someone who values community because I've been welcomed by strangers who became family in places I'd never heard of before arriving.
+              My identity isn't anchored to a postal code - it's anchored to principles. I'm someone who believes in education because I taught students in Vietnam. I'm someone who understands resilience because I have started over and over again with the lessons learnt. I'm someone who values community because I've been welcomed by strangers who became family in places I'd never heard of before arriving.
             </p>
             
             <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4 flex items-center">
