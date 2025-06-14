@@ -23,7 +23,7 @@ export const FiftyJobsLessons = ({ onBack }: BlogPostProps) => {
         <Card className="bg-white shadow-xl">
           <CardHeader className="pb-6">
             <CardTitle className="text-3xl text-gray-900">
-              What I Learned from Having 50+ Jobs: Dreams vs. Employment
+              The Right Guy with the Wrong Product
             </CardTitle>
             <p className="text-gray-600 text-lg">
               A journey through the employment landscape and the unwavering belief in personal dreams and entrepreneurial spirit.
