@@ -1,24 +1,42 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Linkedin } from "lucide-react";
 
 interface BlogPostProps {
   onBack: () => void;
 }
 
 export const FinancialLiteracyCommunityWealth = ({ onBack }: BlogPostProps) => {
+  const handleLinkedInShare = () => {
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent("Financial Literacy and Building Community Wealth through Purpose Led Ventures");
+    const summary = encodeURIComponent("Exploring how financial literacy and purpose-driven entrepreneurship can create sustainable community wealth and reduce poverty.");
+    
+    const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}&summary=${summary}`;
+    window.open(linkedinUrl, '_blank', 'width=600,height=400');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <Button 
-          onClick={onBack}
-          variant="outline" 
-          className="mb-8"
-        >
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Timeline
-        </Button>
+        <div className="flex justify-between items-center mb-8">
+          <Button 
+            onClick={onBack}
+            variant="outline"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Timeline
+          </Button>
+          
+          <Button 
+            onClick={handleLinkedInShare}
+            className="bg-[#0077B5] hover:bg-[#005885] text-white"
+          >
+            <Linkedin className="w-4 h-4 mr-2" />
+            Share on LinkedIn
+          </Button>
+        </div>
         
         <Card className="bg-white shadow-xl">
           <CardHeader className="pb-6">
