@@ -54,7 +54,7 @@ export const HomeWhereTheHeartIs = ({ onBack }: BlogPostProps) => {
             </div>
 
             <p>
-              There's a saying that goes "home is where the heart is," but what happens when your heart has been scattered across continents, cities, and cultures? When you've moved more than your employers have offices, and your passport tells a story of wandering that even you sometimes struggle to piece together?
+              There's a saying that goes "home is where the heart is," but what happens when your heart has been scattered across continents, cities, and cultures? When you've moved more than your employers have offices, and your passports tell a story of wandering that even you sometimes struggle to piece together?
             </p>
             
             <p>
