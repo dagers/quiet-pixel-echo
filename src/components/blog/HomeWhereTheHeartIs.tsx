@@ -116,11 +116,11 @@ export const HomeWhereTheHeartIs = ({ onBack }: BlogPostProps) => {
             </p>
             
             <p>
-              Every city I've called home temporarily has taught me something new about myself. London taught me about ambition. Vietnam taught me about gratitude and the power of education. Each place has been a classroom, each culture a teacher, each challenge a lesson in adaptation and growth.
+              Every city I've called home temporarily has taught me something new about myself. The UK taught me about ambition. Vietnam taught me how the mindset of whole societies can be shaped to benefit the system. Each place has been a classroom, each culture a teacher, each challenge a lesson in adaptation and growth.
             </p>
             
             <p>
-              Research shows that 73% of global citizens feel they belong to a worldwide community. This isn't about rejecting local connections - it's about expanding the definition of community. My tribe isn't limited by borders; it includes the teacher in Hanoi who inspired my love of education, the entrepreneur in London who funded my crazy ideas, the student anywhere in the world who benefits from financial literacy education.
+              Research shows that 73% of global citizens feel they belong to a worldwide community. This isn't about rejecting local connections - it's about expanding the definition of community.
             </p>
             
             <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4 flex items-center">
