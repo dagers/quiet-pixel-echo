@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, Lightbulb, Heart, TrendingUp, Award, BookOpen, ExternalLink, Globe, Users, Target, Briefcase } from "lucide-react";
+import { Calendar, Lightbulb, Heart, TrendingUp, Award, BookOpen, ExternalLink, Globe, Users, Target, Briefcase, Brain } from "lucide-react";
 
 // Import blog components
 import { EarlyEntrepreneurialFlair } from "./blog/EarlyEntrepreneurialFlair";
@@ -12,6 +12,7 @@ import { FreeProductLaunch } from "./blog/FreeProductLaunch";
 import { PizzaConesRiceStraws } from "./blog/PizzaConesRiceStraws";
 import { ComingBackFromVietnam } from "./blog/ComingBackFromVietnam";
 import { FinancialLiteracyCommunityWealth } from "./blog/FinancialLiteracyCommunityWealth";
+import { FiftyJobsLessons } from "./blog/FiftyJobsLessons";
 
 export const Timeline = () => {
   const [activeBlog, setActiveBlog] = useState<string | null>(null);
@@ -72,6 +73,15 @@ export const Timeline = () => {
       blogKey: "coming-back-from-vietnam"
     },
     {
+      year: "2023",
+      title: "What I Learned from Having 50+ Jobs: Dreams vs. Employment",
+      description: "Reflecting on a journey through 50+ jobs and the realization that my identity was always entrepreneurial. The Pizza Cone experience validated my abilities - I was the 'right guy' even if the product wasn't perfect.",
+      value: "Self-Discovery",
+      icon: Brain,
+      color: "bg-gradient-to-br from-pink-500 to-pink-600",
+      blogKey: "fifty-jobs-lessons"
+    },
+    {
       year: "Present",
       title: "Financial Literacy and Building Community Wealth through Purpose Led Ventures",
       description: "Focusing on enhancing lives through financial literacy education and purpose-driven entrepreneurship, believing that personal growth and overcoming poverty are closely related through building community wealth.",
@@ -105,6 +115,8 @@ export const Timeline = () => {
         return <PizzaConesRiceStraws onBack={handleBackToTimeline} />;
       case "coming-back-from-vietnam":
         return <ComingBackFromVietnam onBack={handleBackToTimeline} />;
+      case "fifty-jobs-lessons":
+        return <FiftyJobsLessons onBack={handleBackToTimeline} />;
       case "financial-literacy-community-wealth":
         return <FinancialLiteracyCommunityWealth onBack={handleBackToTimeline} />;
       default:
