@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Globe, ExternalLink } from "lucide-react";
+import { Globe, Linkedin } from "lucide-react";
 import { TimelineEvent } from "./timeline/TimelineEvent";
 import { BlogRenderer } from "./timeline/BlogRenderer";
 import { timelineEvents } from "./timeline/timelineData";
@@ -65,9 +65,10 @@ export const Timeline = () => {
               </p>
               <Button 
                 className="mt-6 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white font-medium px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300"
+                onClick={() => window.open('https://www.linkedin.com/in/dagshofrats/', '_blank')}
               >
                 Connect With Me
-                <ExternalLink className="ml-2 h-4 w-4" />
+                <Linkedin className="ml-2 h-4 w-4" />
               </Button>
             </CardContent>
           </Card>
