@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -84,7 +85,7 @@ export const FiftyJobsLessons = ({ onBack }: BlogPostProps) => {
             </p>
             
             <p>
-              Now, as I focus on financial literacy and building community wealth through purpose-led ventures, I'm operating from a place of complete alignment across all of Dilts' logical levels. My environment supports my entrepreneurial work, my behaviors are aligned with my values, my capabilities are being used to their fullest, and most importantly, my identity and purpose are in perfect harmony.
+              Now, as I focus on financial literacy and building community wealth through purpose-led ventures, I'm operating from a place of complete alignment across all of Dilts' logical levels. My environment supports my entrepreneurial work - and it's important to keep searching for and maintaining the right environment. I continue searching for mine and making the difficult decision to cut off people who have different life values. I wish them all the best luck, but it is time to part ways and embrace true dreams. My behaviors are aligned with my values, my capabilities are being used to their fullest, and most importantly, my identity and purpose are in perfect harmony.
             </p>
             
             <p>
