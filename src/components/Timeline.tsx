@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, Lightbulb, Heart, TrendingUp, Award, BookOpen, ExternalLink, Globe, Users, Target, Briefcase, Brain } from "lucide-react";
+import { Calendar, Lightbulb, Heart, TrendingUp, Award, BookOpen, ExternalLink, Globe, Users, Target, Briefcase, Brain, Home } from "lucide-react";
 
 // Import blog components
 import { EarlyEntrepreneurialFlair } from "./blog/EarlyEntrepreneurialFlair";
@@ -13,6 +13,7 @@ import { PizzaConesRiceStraws } from "./blog/PizzaConesRiceStraws";
 import { ComingBackFromVietnam } from "./blog/ComingBackFromVietnam";
 import { FinancialLiteracyCommunityWealth } from "./blog/FinancialLiteracyCommunityWealth";
 import { FiftyJobsLessons } from "./blog/FiftyJobsLessons";
+import { HomeWhereTheHeartIs } from "./blog/HomeWhereTheHeartIs";
 
 export const Timeline = () => {
   const [activeBlog, setActiveBlog] = useState<string | null>(null);
@@ -89,6 +90,15 @@ export const Timeline = () => {
       icon: Target,
       color: "bg-gradient-to-br from-indigo-500 to-indigo-600",
       blogKey: "financial-literacy-community-wealth"
+    },
+    {
+      year: "Reflection",
+      title: "If home's where the heart is then i'll wear it on my sleeve",
+      description: "Exploring identity and purpose as a global citizen - like a mustang running around the world, searching for belonging while discovering that home is something you carry within yourself.",
+      value: "Global Citizenship",
+      icon: Home,
+      color: "bg-gradient-to-br from-emerald-500 to-emerald-600",
+      blogKey: "home-where-heart-is"
     }
   ];
 
@@ -119,6 +129,8 @@ export const Timeline = () => {
         return <FiftyJobsLessons onBack={handleBackToTimeline} />;
       case "financial-literacy-community-wealth":
         return <FinancialLiteracyCommunityWealth onBack={handleBackToTimeline} />;
+      case "home-where-heart-is":
+        return <HomeWhereTheHeartIs onBack={handleBackToTimeline} />;
       default:
         return null;
     }
