@@ -13,14 +13,17 @@ interface TimelineEventProps {
 
 export const TimelineEvent = ({ event, index, onReadBlog }: TimelineEventProps) => {
   return (
-    <div className={`relative flex items-center mb-16 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+    <div className={`relative flex items-start md:items-center mb-16 md:justify-between ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
       {/* Timeline dot */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-white rounded-full border-4 border-primary shadow-lg z-10">
+      <div className="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-6 h-6 bg-white rounded-full border-4 border-primary shadow-lg z-10">
         <div className="w-2 h-2 bg-primary rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
       </div>
 
+      {/* Spacer for desktop layout */}
+      <div className="hidden md:block md:w-5/12"></div>
+
       {/* Content card */}
-      <div className={`w-5/12 ${index % 2 === 0 ? 'pr-12' : 'pl-12'}`}>
+      <div className={`w-full pl-12 md:pl-0 md:w-5/12 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
         <Card className="bg-white shadow-xl hover:shadow-2xl transition-all duration-300 border-0 overflow-hidden group">
           <div className="h-2 bg-gradient-to-r from-primary to-primary/70"></div>
           <CardHeader className="pb-4">

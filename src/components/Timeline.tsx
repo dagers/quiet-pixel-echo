@@ -37,7 +37,7 @@ export const Timeline = () => {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-px h-full w-1 bg-gradient-to-b from-primary via-primary/80 to-primary/30 rounded-full"></div>
+          <div className="absolute left-4 top-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-primary via-primary/80 to-primary/30 rounded-full"></div>
 
           {timelineEvents.map((event, index) => (
             <TimelineEvent 
