@@ -1,106 +1,14 @@
-import { useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Calendar, Lightbulb, Heart, TrendingUp, Award, BookOpen, ExternalLink, Globe, Users, Target, Briefcase, Brain, Home } from "lucide-react";
 
-// Import blog components
-import { EarlyEntrepreneurialFlair } from "./blog/EarlyEntrepreneurialFlair";
-import { PremierLeagueStartup } from "./blog/PremierLeagueStartup";
-import { TeachingInVietnam } from "./blog/TeachingInVietnam";
-import { FreeProductLaunch } from "./blog/FreeProductLaunch";
-import { PizzaConesRiceStraws } from "./blog/PizzaConesRiceStraws";
-import { ComingBackFromVietnam } from "./blog/ComingBackFromVietnam";
-import { FinancialLiteracyCommunityWealth } from "./blog/FinancialLiteracyCommunityWealth";
-import { FiftyJobsLessons } from "./blog/FiftyJobsLessons";
-import { HomeWhereTheHeartIs } from "./blog/HomeWhereTheHeartIs";
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Globe, ExternalLink } from "lucide-react";
+import { TimelineEvent } from "./timeline/TimelineEvent";
+import { BlogRenderer } from "./timeline/BlogRenderer";
+import { timelineEvents } from "./timeline/timelineData";
 
 export const Timeline = () => {
   const [activeBlog, setActiveBlog] = useState<string | null>(null);
-
-  const timelineEvents = [
-    {
-      year: "Early Years",
-      title: "Early Entrepreneurial Flair",
-      description: "From selling mixtapes to friends in elementary school to running a high-school gaming server and funding a paintball field at 19. Took solace in entrepreneurship to escape feeling like an alien in early school years.",
-      value: "Resilience",
-      icon: Heart,
-      color: "bg-gradient-to-br from-red-500 to-red-600",
-      blogKey: "early-entrepreneurial"
-    },
-    {
-      year: "2018-2019",
-      title: "A Crazy Google Search That Led to a Premier League Startup",
-      description: "Launched a sustainable pizza cone startup for bakeries, raised six figures in investor funding, and strategically tackled global supply issues - all from a single Google search for 'crazy business ideas'.",
-      value: "Innovation",
-      icon: Lightbulb,
-      color: "bg-gradient-to-br from-orange-500 to-orange-600",
-      blogKey: "premier-league-startup"
-    },
-    {
-      year: "2019-2022",
-      title: "Teaching Results-Driven Experiences in Vietnam",
-      description: "Crafted custom learning resources and encouraged high-school and university students in Vietnam to pursue their ambitions by creating interactive lessons that promoted financial literacy and resilience.",
-      value: "Growth",
-      icon: Users,
-      color: "bg-gradient-to-br from-green-500 to-green-600",
-      blogKey: "teaching-vietnam"
-    },
-    {
-      year: "2020",
-      title: "How I Scored a Free Product Launch for Students",
-      description: "Successfully negotiated with the CEO of CatchBox to provide free Wireless Microphone Systems to students in Vietnam, creating a reward system that became a major positive influence.",
-      value: "Leadership",
-      icon: Award,
-      color: "bg-gradient-to-br from-blue-500 to-blue-600",
-      blogKey: "free-product-launch"
-    },
-    {
-      year: "2021",
-      title: "Pizza Cones, Rice Straws and Vegan Pulled Pork",
-      description: "From sourcing and packaging to exports and creating brands - quickly identifying emerging trends and establishing innovative start-ups that address gaps in the market.",
-      value: "Innovation",
-      icon: TrendingUp,
-      color: "bg-gradient-to-br from-purple-500 to-purple-600",
-      blogKey: "pizza-cones-rice-straws"
-    },
-    {
-      year: "2022",
-      title: "Coming back from Vietnam and getting into employment",
-      description: "Navigating the challenging UK job market after returning from Vietnam, facing recruitment struggles and mental health challenges before finding the right opportunity.",
-      value: "Perseverance",
-      icon: Briefcase,
-      color: "bg-gradient-to-br from-teal-500 to-teal-600",
-      blogKey: "coming-back-from-vietnam"
-    },
-    {
-      year: "2023",
-      title: "What I Learned from Having 50+ Jobs: Dreams vs. Employment",
-      description: "Reflecting on a journey through 50+ jobs and the realization that my identity was always entrepreneurial. The Pizza Cone experience validated my abilities - I was the 'right guy' even if the product wasn't perfect.",
-      value: "Self-Discovery",
-      icon: Brain,
-      color: "bg-gradient-to-br from-pink-500 to-pink-600",
-      blogKey: "fifty-jobs-lessons"
-    },
-    {
-      year: "Present",
-      title: "Financial Literacy and Building Community Wealth through Purpose Led Ventures",
-      description: "Focusing on enhancing lives through financial literacy education and purpose-driven entrepreneurship, believing that personal growth and overcoming poverty are closely related through building community wealth.",
-      value: "Purpose",
-      icon: Target,
-      color: "bg-gradient-to-br from-indigo-500 to-indigo-600",
-      blogKey: "financial-literacy-community-wealth"
-    },
-    {
-      year: "Reflection",
-      title: "If home's where the heart is then i'll wear it on my sleeve",
-      description: "Exploring identity and purpose as a global citizen - like a mustang running around the world, searching for belonging while discovering that home is something you carry within yourself.",
-      value: "Global Citizenship",
-      icon: Home,
-      color: "bg-gradient-to-br from-emerald-500 to-emerald-600",
-      blogKey: "home-where-heart-is"
-    }
-  ];
 
   const handleReadBlog = (blogKey: string) => {
     setActiveBlog(blogKey);
@@ -112,28 +20,7 @@ export const Timeline = () => {
 
   // Render blog post if one is active
   if (activeBlog) {
-    switch (activeBlog) {
-      case "early-entrepreneurial":
-        return <EarlyEntrepreneurialFlair onBack={handleBackToTimeline} />;
-      case "premier-league-startup":
-        return <PremierLeagueStartup onBack={handleBackToTimeline} />;
-      case "teaching-vietnam":
-        return <TeachingInVietnam onBack={handleBackToTimeline} />;
-      case "free-product-launch":
-        return <FreeProductLaunch onBack={handleBackToTimeline} />;
-      case "pizza-cones-rice-straws":
-        return <PizzaConesRiceStraws onBack={handleBackToTimeline} />;
-      case "coming-back-from-vietnam":
-        return <ComingBackFromVietnam onBack={handleBackToTimeline} />;
-      case "fifty-jobs-lessons":
-        return <FiftyJobsLessons onBack={handleBackToTimeline} />;
-      case "financial-literacy-community-wealth":
-        return <FinancialLiteracyCommunityWealth onBack={handleBackToTimeline} />;
-      case "home-where-heart-is":
-        return <HomeWhereTheHeartIs onBack={handleBackToTimeline} />;
-      default:
-        return null;
-    }
+    return <BlogRenderer activeBlog={activeBlog} onBack={handleBackToTimeline} />;
   }
 
   return (
@@ -153,59 +40,12 @@ export const Timeline = () => {
           <div className="absolute left-1/2 transform -translate-x-px h-full w-1 bg-gradient-to-b from-primary via-primary/80 to-primary/30 rounded-full"></div>
 
           {timelineEvents.map((event, index) => (
-            <div key={index} className={`relative flex items-center mb-16 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-              {/* Timeline dot */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-white rounded-full border-4 border-primary shadow-lg z-10">
-                <div className="w-2 h-2 bg-primary rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-              </div>
-
-              {/* Content card */}
-              <div className={`w-5/12 ${index % 2 === 0 ? 'pr-12' : 'pl-12'}`}>
-                <Card className="bg-white shadow-xl hover:shadow-2xl transition-all duration-300 border-0 overflow-hidden group">
-                  <div className="h-2 bg-gradient-to-r from-primary to-primary/70"></div>
-                  <CardHeader className="pb-4">
-                    <div className="flex items-center justify-between mb-3">
-                      <Badge variant="secondary" className="text-sm bg-primary/10 text-primary hover:bg-primary/20 font-semibold px-3 py-1">
-                        <Calendar className="w-3 h-3 mr-1" />
-                        {event.year}
-                      </Badge>
-                      <div className={`p-3 rounded-xl ${event.color} text-white shadow-lg`}>
-                        <event.icon className="w-5 h-5" />
-                      </div>
-                    </div>
-                    <CardTitle className="text-xl text-gray-900 leading-tight">
-                      {event.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-600 leading-relaxed">
-                      {event.description}
-                    </p>
-                    
-                    {/* Blog Post Section - Simplified */}
-                    <div className="bg-slate-50 rounded-lg p-4">
-                      <div className="flex items-center text-primary font-semibold mb-3">
-                        <BookOpen className="w-4 h-4 mr-2" />
-                        Related Blog Post
-                      </div>
-                      <Button 
-                        variant="outline" 
-                        size="sm"
-                        onClick={() => handleReadBlog(event.blogKey)}
-                        className="w-full border-primary/20 text-primary hover:bg-primary/5 hover:border-primary/40 transition-all duration-300"
-                      >
-                        Read Full Story
-                        <ExternalLink className="w-3 h-3 ml-2" />
-                      </Button>
-                    </div>
-
-                    <Badge className="bg-gradient-to-r from-primary/10 to-primary/5 text-primary hover:from-primary/20 hover:to-primary/10 border-primary/20 font-medium">
-                      {event.value}
-                    </Badge>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
+            <TimelineEvent 
+              key={index}
+              event={event}
+              index={index}
+              onReadBlog={handleReadBlog}
+            />
           ))}
         </div>
 
