@@ -159,23 +159,17 @@ export const Timeline = () => {
                       {event.description}
                     </p>
                     
-                    {/* Blog Post Section */}
-                    <div className="bg-slate-50 rounded-lg p-4 space-y-3">
-                      <div className="flex items-center text-primary font-semibold">
+                    {/* Blog Post Section - Simplified */}
+                    <div className="bg-slate-50 rounded-lg p-4">
+                      <div className="flex items-center text-primary font-semibold mb-3">
                         <BookOpen className="w-4 h-4 mr-2" />
                         Related Blog Post
                       </div>
-                      <h4 className="font-semibold text-gray-900 text-sm">
-                        {event.blogTitle}
-                      </h4>
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        {event.blogSummary}
-                      </p>
                       <Button 
                         variant="outline" 
                         size="sm"
                         onClick={() => handleReadBlog(event.blogKey)}
-                        className="w-full mt-3 border-primary/20 text-primary hover:bg-primary/5 hover:border-primary/40 transition-all duration-300"
+                        className="w-full border-primary/20 text-primary hover:bg-primary/5 hover:border-primary/40 transition-all duration-300"
                       >
                         Read Full Story
                         <ExternalLink className="w-3 h-3 ml-2" />
